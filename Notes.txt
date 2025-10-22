@@ -1,0 +1,7 @@
+App Page 
+
+Installation :-
+ npm install react-router-dom 
+npm install Swiper
+npm install bootstrap
+npm install react-bootstrap bootstrap
