@@ -20,7 +20,7 @@ export default function SellerCategories() {
         <div className="row">
           {categories.map((categoryData, index) => (
             <div className="col-3 p-5" key={index}>
-              <div className="product-card " >
+              <div className="product-card h-100 w-100 IndividualCard" >
                 <img src={categoryData.img} className="img-fluid" alt={categoryData.name} width={360} height={360} />
               </div>
              

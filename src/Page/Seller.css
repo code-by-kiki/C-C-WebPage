@@ -12,10 +12,17 @@
 {
     margin: 10rem 10rem ;
     padding: 3rem;
+    
 }
 
 .Button
 {
     border-radius: 4rem;
     width: 20rem;
+}
+
+.IndividualCard
+{
+    border: 10px solid #334b66; /* Blue border */
+  border-radius: 10px;
 }

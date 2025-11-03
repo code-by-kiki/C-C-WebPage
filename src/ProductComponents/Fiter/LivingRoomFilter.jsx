@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const LivingRoomFilter = ({ onFilterChange }) => {
   const [Filter, setFilter] = useState({
-    product: '',
+    Product: '',
     price: ''
   });
 
@@ -19,7 +19,7 @@ const LivingRoomFilter = ({ onFilterChange }) => {
 
       <div className="mb-3">
         <label>Product</label>
-        <select name="product" className="form-select" onChange={handleChange} value={Filter.product}>
+        <select name="Product" className="form-select" onChange={handleChange} value={Filter.Product}>
           <option value="">All</option>
           <option value="Decor & Accessorie">Decor & Accessorie</option>
           <option value="Storage & Display">Storage & Display</option>

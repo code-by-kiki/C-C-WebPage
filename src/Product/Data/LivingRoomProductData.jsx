@@ -14,7 +14,7 @@ const livingroomproduct =[
     {name:'3-Seater Wooden Sofa',brand:'SMR Handicraft',price:22599,type:'Solid Wood Sofa',Product:'Seating',img:livingproducts},
 ]
 
-export default livingproduct;
+export default livingroomproduct;
 
 
 
