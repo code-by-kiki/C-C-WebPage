@@ -1,0 +1,29 @@
+.Footer
+{
+    background-color:rgb(248, 252, 255);
+  
+}
+
+.instagram, .facebook ,.twitter
+{
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.instagramText  ,.facebookText ,.twitterText
+{
+  visibility: hidden;
+  width: 130px;
+  background-color: rgba(39, 39, 39,0.2);
+  color: #602f2f;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.instagramText:hover .instagramText ,.facebookText:hover .facebookText ,.twitterText:hover .twitterText{
+    visibility: visible;
+}

@@ -1,0 +1,25 @@
+/* Hole Container */
+.Container
+{
+    margin-top: 8rem;
+}
+
+/* Main Title  */
+.title
+{
+    
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* DashBoard Categories */
+button
+{
+    display: block;
+    padding: .5rem;
+    height: 3rem;
+    width: 10rem;
+     background-color:rgb(248, 252, 255);
+     border-color:rgb(21, 69, 106) ;
+}
+

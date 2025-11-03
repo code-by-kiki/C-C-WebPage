@@ -1,23 +1,51 @@
-.slide-content {
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  pointer-events: auto;
-  border-radius: 10px;
+.section
+{
+  font-family:  Arial, sans-serif;
+  margin-top: 150px;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  color: #333;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 10px;
-  border-radius: 50%;
-  font-size: 1.5rem;
-}
-.swiper-slide {
-  transition: transform 0.6s ease-in-out;
+/* Product Card */
+.product-card {
+  transition: box-shadow 0.3s ease;
+  border-radius: 8px;
+  margin-top: 1rem;
 }
 
-.swiper-slide:hover {
-  transform: scale(1.02);
+.product-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
+
+/* Product Card  Swiper */
+.swiper-button-wrapper {
+  position: relative;
+}
+
+.custom-prev,
+.custom-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  padding: 2px 2px;
+  width: 3rem;
+ 
+}
+
+.custom-prev {
+  left: 0px; 
+
+}
+
+.custom-next {
+  right: 0px; 
+}
+
+/* Buying Button  */
+.buy
+{
+ background-color: rgba(68, 68, 78,0.2); 
+}
+ .buy:hover{
+  background-color: rgb(68, 68, 78);
+  color: white;
+ }

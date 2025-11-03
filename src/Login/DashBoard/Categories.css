@@ -1,0 +1,38 @@
+/* Profile */
+
+.profile
+{
+    color:rgb(36, 35, 35)
+}
+
+.title
+{
+    align-items: center;
+}
+
+.profileCard
+{
+    background-color: rgb(247, 251, 255);
+  box-shadow: inset;
+}
+
+.button
+{
+    width:6rem ;
+    border-radius: 10px;
+    justify-content: end;
+    border-color: gray;  
+}
+
+.TotalProduct
+{
+   width: 24rem;
+   height: 5rem;
+}
+
+
+
+
+
+
+/* My Ads */
