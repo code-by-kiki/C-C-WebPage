@@ -1,4 +1,7 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import './App.css';
+import './Page/Product.css';
+import Logo from './assets/Logo.png';
 import BikePage from './ProductComponents/Vehicles/Bike';
 import CarPage from './ProductComponents/Vehicles/Car';
 import JeepPage from './ProductComponents/Vehicles/Jeep';
@@ -20,17 +23,13 @@ import Furniture from './Product/Furniture';
 import Vehicles from './Product/Vehicles';
 import Services from './Product/Services';
 import Sports from './Product/Sports';
-import './App.css';
-import './Page/Product.css';
-import Logo from './assets/Logo.png';
-import StorageProduct from './ProductComponents/Furniture/StorageProduct';
 import BedRoomProduct from './ProductComponents/Furniture/BedRoomProduct';
 import OfficeProduct from './ProductComponents/Furniture/OfficeProduct';
 import LivingProduct from './ProductComponents/Furniture/LivingRoomProduct';
 import Outdoor from './ProductComponents/Furniture/OutDoorProduct';
-import TentProduct from './ProductComponents/Sport/Tent';
 import GymProduct from './ProductComponents/Sport/GymProduct';
 import SellerCategories from './Page/SellerCategories';
+import SportProduct from './ProductComponents/Sport/SportProduct';
 
 function App() {
   return (
@@ -62,7 +61,7 @@ function App() {
             <Link to="/Electornic" className="nav-link Electornic">Electornic</Link>
             <Link to="/Furniture" className="nav-link Furniture">Home & Furniture</Link>
             <Link to="/Services" className="nav-link Services">Services</Link>
-            <Link to="/Sports" className="nav-link Sports">Sports & Outdoors</Link>
+            <Link to="/Sports" className="nav-link Sports">Sports & Fitness</Link>
           </div>
 
           <div className="navbar-nav d-flex gap-2 align-items-center">
@@ -111,13 +110,12 @@ function App() {
 
         {/* Furniture Detail Pages */}
         <Route path="/ProductComponents/Furniture/BedRoomProduct" element={<BedRoomProduct />} />
-        <Route path="/ProductComponents/Furniture/StorageProduct" element={<StorageProduct />} />
         <Route path="/ProductComponents/Furniture/OfficeProduct" element={<OfficeProduct />} />
         <Route path="/ProductComponents/Furniture/LivingRoomProduct" element={<LivingProduct />} />
         <Route path="/ProductComponents/Furniture/OutDoorProduct" element={<Outdoor />} />
 
         {/*Sport Detail Page  */}
-       <Route path='/ProductComponents/Sport/Tent' element={<TentProduct/>}/>
+       <Route path='/ProductComponents/Sport/SportProduct' element={<SportProduct/>}/>
        <Route path='/ProductComponents/Sport/GymProduct' element={<GymProduct/>}/>
          
          {/* Seller Post */}

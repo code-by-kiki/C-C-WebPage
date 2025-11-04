@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import gymproduct from "../../Product/Data/GymProductData";
-import GymProductFilter from "../Fiter/GymProductFilter";
+import sportproduct from "../../Product/Data/SportProductData";
+import SportProductFilter from "../Fiter/SportProductFilter";
 
-const GymProductPage = () => {
-  const [filteredProducts, setFilteredProducts] = useState(gymproduct);
+const SportProductPage = () => {
+  const [filteredProducts, setFilteredProducts] = useState(sportproduct);
 
   const applyFilter = (filterData) => {
-    let result = [...gymproduct];
+    let result = [...sportproduct];
 
     if (filterData.category) {
       result = result.filter((p) => p.category === filterData.category);
@@ -35,7 +35,7 @@ const GymProductPage = () => {
     <div className="container" style={{ marginTop: 200 }}>
       <div className="row">
         <div className="col-md-3">
-          <GymProductFilter onFilterChange={applyFilter} />
+          <SportProductFilter onFilterChange={applyFilter} />
         </div>
 
         <div className="col-md-9">
@@ -68,4 +68,4 @@ const GymProductPage = () => {
   );
 };
 
-export default GymProductPage;
+export default SportProductPage;

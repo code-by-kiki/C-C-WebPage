@@ -18,7 +18,7 @@ const LivingRoomFilter = ({ onFilterChange }) => {
       <h5>Filter Products</h5>
 
       <div className="mb-3">
-        <label>Product</label>
+        <label>Category</label>
         <select name="Product" className="form-select" onChange={handleChange} value={Filter.Product}>
           <option value="">All</option>
           <option value="Decor & Accessorie">Decor & Accessorie</option>

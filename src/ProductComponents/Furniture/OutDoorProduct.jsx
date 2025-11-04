@@ -8,20 +8,18 @@ const OutDoorPage = () => {
   const applyFilter = (FilterData) => {
     let result = outdoorproduct;
 
-    // Category Filter
     if (FilterData.category) {
       result = result.filter((p) => p.category === FilterData.category);
     }
 
-    // Price Filter
     if (FilterData.price) {
-      const { min, max } = FilterData.price; // ✅ destructure properly
+      const { min, max } = FilterData.price;
       result = result.filter((p) => {
         const price = parseInt(p.price);
         if (max) {
-          return price >= parseInt(min) && price <= parseInt(max);
+          return price >= min && price <= max;
         }
-        return price >= parseInt(min);
+        return price >= min;
       });
     }
 
@@ -40,18 +38,11 @@ const OutDoorPage = () => {
             {filteredProducts.map((product, index) => (
               <div className="col-md-4 mb-4" key={index}>
                 <div className="card h-100">
-                  <img
-                    src={product.img}
-                    alt={product.name}
-                    className="card-img-top"
-                  />
+                  <img src={product.img} alt={product.name} className="card-img-top" />
                   <div className="card-body">
                     <h6>{product.name}</h6>
                     <p>₹{product.price}</p>
-                    <small>
-                      {product.brand} | {product.dimension} |{" "}
-                      {product.functionality} | {product.material}
-                    </small>
+                    <small>{product.brand} | {product.category} | {product.type}</small>
                   </div>
                 </div>
               </div>

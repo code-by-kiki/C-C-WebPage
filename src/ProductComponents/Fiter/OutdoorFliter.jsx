@@ -9,17 +9,6 @@ const OutDoorProductFilter = ({ onFilterChange }) => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     let updated = { ...filter, [name]: value };
-
-    // Convert price string to object {min, max}
-    if (name === "price" && value) {
-      if (value.includes("+")) {
-        updated.price = { min: parseInt(value), max: null };
-      } else {
-        const [min, max] = value.split("-").map((v) => parseInt(v));
-        updated.price = { min, max };
-      }
-    }
-
     setFilter(updated);
     onFilterChange(updated);
   };
@@ -30,12 +19,7 @@ const OutDoorProductFilter = ({ onFilterChange }) => {
 
       <div className="mb-3">
         <label>Category</label>
-        <select
-          name="category"
-          className="form-select"
-          onChange={handleChange}
-          value={filter.category}
-        >
+        <select name="category" className="form-select" onChange={handleChange} value={filter.category}>
           <option value="">All</option>
           <option value="Camping & Hiking Gear">Camping & Hiking Gear</option>
           <option value="Outdoor Furniture & Living">Outdoor Furniture & Living</option>
@@ -46,12 +30,7 @@ const OutDoorProductFilter = ({ onFilterChange }) => {
 
       <div className="mb-3">
         <label>Price</label>
-        <select
-          name="price"
-          className="form-select"
-          onChange={handleChange}
-          value={filter.price.min ? `${filter.price.min}-${filter.price.max || '+'}` : ''}
-        >
+        <select name="price"  className="form-select"  onChange={handleChange}  value={filter.price}>
           <option value="">All</option>
           <option value="0-10000">₹0–₹10,000</option>
           <option value="10000-20000">₹10,000–₹20,000</option>

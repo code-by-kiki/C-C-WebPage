@@ -48,7 +48,7 @@ const BedRoomProductFilter =({onFilterChange})=>
                 <label>Price</label>
                 <select name="price" className='form-select' onChange={handleChange} value={Filters.price}>
                     <option value="">All</option>
-                    <option value="0-10000">₹0-10000</option>
+                    <option value="0-10000">₹0-₹10000</option>
                     <option value="10000-20000">₹10000-₹20000</option>
                     <option value="20000-30000">₹20000-₹30000</option>
                     <option value="30000-40000">₹30000-₹40000</option>

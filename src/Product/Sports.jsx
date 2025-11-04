@@ -1,6 +1,6 @@
 import React from "react";
 import gym from '../assets/gym.jpg';
-import tent from '../assets/Tent.png';
+import tent from '../assets/sport.png';
 import { Link } from "react-router-dom";
 
 
@@ -8,7 +8,7 @@ export default function Sports()
 {
   const Sport =[
     {img:gym,link:'/ProductComponents/Sport/GymProduct'},
-    {img:tent,link:'/ProductComponents/Sport/Tent'}
+    {img:tent,link:'/ProductComponents/Sport/SportProduct'}
   ]
 
     return(
