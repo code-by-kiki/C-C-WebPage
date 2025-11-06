@@ -21,14 +21,14 @@ function Dashboard() {
   return (
     <div className="container-fluid dashboard-wrapper" style={{marginTop:105}}>
       <div className="container py-4">
-        {/* Welcome Header */}
+        
         <div className="row mb-4 text-center">
           <h2 className="fw-bold">Welcome, {username}!</h2>
           <p className="text-muted">Manage your profile, ads, and settings from here.</p>
         </div>
 
         <div className="row">
-          {/* Sidebar */}
+         
           <div className="col-12 col-md-4 col-lg-3 mb-3 mb-md-0">
             <div className="sidebar bg-light p-3 rounded shadow-sm h-100">
               <h5 className="mb-4">Dashboard</h5>

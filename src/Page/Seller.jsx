@@ -9,7 +9,7 @@ export default function Seller() {
         <h1 className="mb-4">Sell Your Product</h1>
         <div className="d-grid gap-4">
           <Link to="/SellerCategories" className="nav-link">
-            <button className="btn  seller-btn">Create Post</button>
+            <button className="btn  btn-outline-secondary seller-btn">Create Post</button>
           </Link>
           <Link to="/OtherPost" className="nav-link">
             <button className="btn btn-outline-secondary seller-btn">Other Posts</button>

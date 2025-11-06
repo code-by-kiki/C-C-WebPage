@@ -17,7 +17,18 @@ export default function CreatePost() {
 
   const categorySpecificFields = {
     Furniture:
-     <input type="text" placeholder="Dimensions (L x W x H)" />,
+    (
+      <div className="">
+         <input type="text" placeholder="Dimensions (L x W x H)" />
+          <input type="text" placeholder="Brand" />
+          <input type="text" placeholder="Functionality" />
+          <input type="text" placeholder="Material" />
+          <input type="text" placeholder="Category" />
+          <input type="text" placeholder="Type" />
+                 
+      </div>
+    ),
+     
     Vehicle: (
       <div>
         <input type="text" placeholder="Brand / Model" />
@@ -26,20 +37,31 @@ export default function CreatePost() {
         <input type="text" placeholder="Fuel Type" />
       </div>
     ),
-    "OutDoor Furniture": <input type="text" placeholder="Material Type" />,
-    "Sport Product": <input type="text" placeholder="Sport Type / Brand" />,
-    Electronics: (
+   
+    "Sport Product": (
+       <>
+      <input type="text" placeholder=" Brand" />
+      <input type="text" placeholder=" Category" />
+      <input type="text" placeholder="Material" />
+       </>
+    ),
+
+    Electronic: (
       <div>
         <input type="text" placeholder="Brand / Model" />
         <input type="text" placeholder="Warranty Period" />
+        <input type="text" placeholder="Gadget Type"/>
+        <input type="text" placeholder="RAM"/>
+        <input type="storage" placeholder="Storage"/>
+        
       </div>
     ),
   };
 
   return (
     <div className="create-post-container " style={{marginTop:150}}>
-      <h2>Create Post for {category}</h2>
-      <form className="post-form">
+      <h2 className="mb-4"> Post for {category}</h2>
+      <form className="post-form ">
         {commonFields}
         {categorySpecificFields[category] || null}
         <button type="submit">Submit Post</button>

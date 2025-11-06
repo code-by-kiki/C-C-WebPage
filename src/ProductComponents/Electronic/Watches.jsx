@@ -46,7 +46,7 @@ const WatchesPage = () => {
                   <div className="card-body">
                     <h6>{watch.name}</h6>
                     <p>₹{watch.price}</p>
-                    <small>{watch.brand} | {watch.watch} | {watch.gender}</small>
+                    <small>{watch.brand} | {watch.watch}</small>
                   </div>
                 </div>
               </div>

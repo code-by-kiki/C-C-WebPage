@@ -10,7 +10,7 @@ export default function SellerCategories() {
   const categories = [
     { img: furniture, name: "Furniture" },
     { img: vehicle, name: "Vehicle" },
-    { img: electronic, name: "OutDoor Furniture" },
+    { img: electronic, name: "Electronic" },
     { img: sport, name: "Sport Product" },
   ];
 

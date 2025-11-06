@@ -6,10 +6,12 @@ export default function Profile() {
   const phonenum = localStorage.getItem('phonenum') || 'None';
   const email = localStorage.getItem('email') || 'no-email';
   
-  if(!localStorage.getItem('loignDate'))
+  if(!localStorage.getItem('loginDate'))
   {
-   localStorage.getItem(
-      'loginDate' ,new Date().toLocaleDateString('en-In',{
+   localStorage.setItem(
+      'loginDate' ,
+      new Date().toLocaleDateString('en-In',
+        {
          day:'numeric',
          month:'long',
          year:'numeric',
