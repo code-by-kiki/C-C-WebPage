@@ -1,7 +1,9 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link,  } from 'react-router-dom';
 import './App.css';
 import './Page/Product.css';
 import Logo from './assets/Logo.png';
+import SearchResults from './Componend/SearchBarResult';
+import SearchBar from './Componend/SearchBar';
 import BikePage from './ProductComponents/Vehicles/Bike';
 import CarPage from './ProductComponents/Vehicles/Car';
 import JeepPage from './ProductComponents/Vehicles/Jeep';
@@ -11,7 +13,7 @@ import LaptopPage from './ProductComponents/Electronic/Laptop';
 import WatchesPage from './ProductComponents/Electronic/Watches';
 import DisplayPage from './ProductComponents/Electronic/Displays';
 import SmartGadgetsPage from './ProductComponents/Electronic/HomeGadgets';
-import SavedItems from './Login/DashBoard/SavedItems';
+import Cart from './Login/DashBoard/Cart';
 import Home from './Page/Home';
 import Footer from './Page/Footer';
 import Product from './Page/Product';
@@ -21,7 +23,6 @@ import Dashboard from './Login/DashBoard';
 import Electornics from './Product/Electronic';
 import Furniture from './Product/Furniture';
 import Vehicles from './Product/Vehicles';
-import Services from './Product/Services';
 import Sports from './Product/Sports';
 import BedRoomProduct from './ProductComponents/Furniture/BedRoomProduct';
 import OfficeProduct from './ProductComponents/Furniture/OfficeProduct';
@@ -30,18 +31,21 @@ import Outdoor from './ProductComponents/Furniture/OutDoorProduct';
 import GymProduct from './ProductComponents/Sport/GymProduct';
 import SellerCategories from './Page/SellerCategories';
 import SportProduct from './ProductComponents/Sport/SportProduct';
+import CreatePost from './Seller/Createpost';
+
 
 function App() {
-  return (
+return (
+
     <BrowserRouter>
       <nav className="navbar navbar-expand-md list container-fluid fixed-top">
         <Link to="/" className="navbar-brand">
           <img src={Logo} alt="Logo" className="Logo img-fluid" />
         </Link>
-        <div className="d-flex align-items-center">
-          <input type="text" placeholder="Search" className="form-control rounded-pill px-3" />
-          <i className="bi bi-search ms-2"></i>
-        </div>
+       
+        <SearchBar/> 
+       
+
         <button
           className="navbar-toggler"
           type="button"
@@ -60,14 +64,13 @@ function App() {
             <Link to="/Vehicles" className="nav-link Vehicles">Vehicles</Link>
             <Link to="/Electornic" className="nav-link Electornic">Electornic</Link>
             <Link to="/Furniture" className="nav-link Furniture">Home & Furniture</Link>
-            <Link to="/Services" className="nav-link Services">Services</Link>
             <Link to="/Sports" className="nav-link Sports">Sports & Fitness</Link>
           </div>
 
           <div className="navbar-nav d-flex gap-2 align-items-center">
             <Link to="/Login" className="nav-link Login">  Registration/Login</Link>
 
-              <Link to="/SavedItems" className='nav-link SavedItems'>
+              <Link to="/Login/DashBoard/Cart" className='nav-link Cart'>
               Cart <i class="bi bi-cart3 fs-5"></i>
             </Link>
             
@@ -79,18 +82,19 @@ function App() {
         </div>
       </nav>
 
+
       {/* All Routes must be inside this block */}
       <Routes>
         {/* Main Pages */}
         <Route path="/" element={<Home />} />
+        <Route path='/search' element={<SearchResults/>}/> 
         <Route path="/Product" element={<Product />} />
-        <Route path="/SavedItems" element={<SavedItems />} />
+        <Route path="/Login/DashBoard/Cart" element={<Cart />} />
         <Route path="/Login" element={<Login />} />
-         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/Vehicles" element={<Vehicles />} />
         <Route path="/Electornic" element={<Electornics />} />
         <Route path="/Furniture" element={<Furniture />} />
-        <Route path="/Services" element={<Services />} />
         <Route path="/Sports" element={<Sports />} />
         <Route path="/Seller" element={<Seller />} />
 
@@ -120,8 +124,7 @@ function App() {
          
          {/* Seller Post */}
           <Route path="/SellerCategories" element={<SellerCategories />} />
-
-
+          <Route path="/CreatePost/:category" element={<CreatePost/>} />
       </Routes>
       <Footer />
     </BrowserRouter>
@@ -129,3 +132,4 @@ function App() {
 }
 
 export default App;
+

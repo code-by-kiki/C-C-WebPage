@@ -3,7 +3,6 @@ import living from '../assets/Living.webp';
 import bedroom from '../assets/bed.webp';
 import outdoor from '../assets/Outdoor.webp';
 import office from '../assets/Office.webp';
-import storge from '../assets/Storage.jpg';
 import { Link } from "react-router-dom";
 
 export default function Furniture()
@@ -13,7 +12,7 @@ export default function Furniture()
     {img:bedroom ,link:'/ProductComponents/Furniture/BedRoomProduct'},
     {img:outdoor ,link:'/ProductComponents/Furniture/OutDoorProduct'},
     {img:office ,link:'/ProductComponents/Furniture/OfficeProduct'},
-    {img:storge ,link:'/ProductComponents/Furniture/StorageProduct'}
+  
    ]
 
     return(

@@ -1,25 +1,31 @@
-/* Hole Container */
-.Container
-{
-    margin-top: 8rem;
+.dashboard-wrapper {
+  background-color: #f8f9fa;
+  min-height: 100vh;
 }
 
-/* Main Title  */
-.title
-{
-    
-    text-align: center;
+.sidebar button.active {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+.sidebar button i {
+  font-size: 1.2rem;
+}
+
+.content-area {
+  min-height: 400px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
     margin-bottom: 1rem;
-}
+  }
 
-/* DashBoard Categories */
-button
-{
-    display: block;
-    padding: .5rem;
-    height: 3rem;
-    width: 10rem;
-     background-color:rgb(248, 252, 255);
-     border-color:rgb(21, 69, 106) ;
-}
+  .content-area {
+    padding: 1rem;
+  }
 
+  .nav-item button {
+    font-size: 0.95rem;
+  }
+}

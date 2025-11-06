@@ -26,8 +26,9 @@
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
-  padding: 2px 2px;
+  padding: 4px 4px;
   width: 3rem;
+  height: 3rem;
  
 }
 
@@ -49,3 +50,106 @@
   background-color: rgb(68, 68, 78);
   color: white;
  }
+
+ .icon-link {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.icon-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-name {
+  position: absolute;
+  font-weight: bold;
+  font-size: 13px;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #000000;
+  padding: 4px 8px;
+  border-radius: 4px;
+
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.icon-wrapper:hover .hover-name {
+  opacity: 1;
+}
+
+/* Ensure Swiper banners scale on smaller screens */
+.bannercard img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+/* Responsive spacing for category icons */
+.icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.hover-name {
+  font-size: 0.9rem;
+  margin-top: 5px;
+  word-break: break-word;
+}
+
+/* Adjust grid spacing for small screens */
+@media (max-width: 576px) {
+  .col-sm-6 {
+    flex: 0 0 25%;
+    max-width: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .swiper-button-wrapper {
+    padding: 0 10px;
+  }
+
+  .card-body h5 {
+    font-size: 1rem;
+  }
+
+  .card-body p {
+    font-size: 0.9rem;
+  }
+
+  .card-body small {
+    font-size: 0.8rem;
+  }
+
+  .review-card {
+    font-size: 0.85rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    text-align: start;
+  }
+}
+
+.section {
+  padding: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .custom-prev,
+  .custom-next {
+    display: none !important;
+  }
+}

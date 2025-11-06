@@ -1,33 +1,30 @@
 /* Profile */
 
-.profile
-{
-    color:rgb(36, 35, 35)
+.profileCard {
+  border-radius: 12px;
+  background-color: #f9f9f9;
 }
 
-.title
-{
-    align-items: center;
+.infoCard {
+  border-radius: 10px;
+  background-color: #fff;
+  transition: transform 0.3s ease;
 }
 
-.profileCard
-{
-    background-color: rgb(247, 251, 255);
-  box-shadow: inset;
+.infoCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-.button
-{
-    width:6rem ;
-    border-radius: 10px;
-    justify-content: end;
-    border-color: gray;  
+.title {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-.TotalProduct
-{
-   width: 24rem;
-   height: 5rem;
+.username {
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 

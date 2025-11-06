@@ -14,7 +14,23 @@ import Banner1 from '../assets/Banner 1.jpg';
 import Banner2 from '../assets/Banner 2.jpg';
 import Banner3 from '../assets/Banner 3.jpg';
 
+import CarIcon from '../assets/CarIcon.jpg';
+import BikeIcon from '../assets/BikeIcons.png';
+import CycleIcon from '../assets/CycleIcons.jpg';
+import JeepIcon from '../assets/JeepIcon.png';
+import phoneIcon from '../assets/PhoneIcon.webp';
+import laptopIcon from '../assets/LaptopIcon.webp';
+import WatchIcon from '../assets/WatchIcon.png';
+import tvIcon from '../assets/TvIcon.png';
+import smartgadgetIcon from '../assets/smartgadgetIcon.png';
+import livingroomIcon from '../assets/livingroomIcon.png';
+import bedroomIcon from '../assets/bedroomIcon.png';
+import outdoorIcon from '../assets/outdoorIcon.png';
+import officeIcon from '../assets/officeIcon.webp';
+import sportIcon from '../assets/sportIcon.png';
+import gymIcon from '../assets/gymIcon.webp';
 import "../Componend/Home.css";
+import { Link } from "react-router-dom";
 
 const products = [
   { id: 1, brand: "Maruthi",price:"500000", image: Car,name:'Swift', type:'Hatchback' },
@@ -30,6 +46,27 @@ const Banner =[
   {id: 2,image : Banner2},
   {id: 3,image : Banner3},
 ]
+
+const Icons=[
+  {icons:CarIcon,name:'Car',link:'/ProductComponents/Car'},
+  {icons:BikeIcon,name:'Bike',link:'/ProductComponents/Bike'},
+  {icons:JeepIcon,name:'Jeep',link:"/ProductComponents/Jeep"},
+  {icons:CycleIcon,name:'BI-Cycle',link:"/ProductComponents/Bicycle"},
+  {icons:phoneIcon,name:'Phone',link:'/ProductComponents/Electronic/Phone'},
+  {icons:laptopIcon,name:'Laptop',link:'/ProductComponents/Electronic/Laptop'},
+  {icons:WatchIcon,name:'Watch',link:'/ProductComponents/Electronic/Watches'},
+  {icons:tvIcon,name:'Tv Display',link:'/ProductComponents/Electronic/Display'},
+  {icons:smartgadgetIcon,name:'SmartGadget Product',link:'/ProductComponents/Electronic/HomeGadgets'},
+  {icons:livingroomIcon,name:'LivingRoom Product',link:'/ProductComponents/Furniture/LivingRoomProduct'},
+  {icons:bedroomIcon,name:'BedRoom Product',link:'/ProductComponents/Furniture/BedRoomProduct'},
+  {icons:outdoorIcon,name:'OutDoor Product',link:'/ProductComponents/Furniture/OutDoorProduct'},
+  {icons:officeIcon,name:'Office Product',link:'/ProductComponents/Furniture/OfficeProduct'},
+  {icons:gymIcon,name:'Gym Product',link:'/ProductComponents/Sport/GymProduct'},
+  {icons:sportIcon,name:'Sport Product',link:'/ProductComponents/Sport/SportProduct'},
+]
+
+
+
 
 const reviews = [
   {
@@ -112,6 +149,31 @@ const ProductSwiper = () => {
       ))}
      </Swiper>
    </div>
+
+
+   {/* All Category */}
+
+   <div className="contanier-fluid mt-5">
+        <div className="row ">
+          <h1 className="mb-4">All Category</h1>
+          {Icons.map((product,index)=>
+          (
+            <div className="col-md-2 col-sm-6  ps-5 g-4" key={index}>
+            <div className="">
+              <Link to={product.link} className="icon-link text-decoration-none"> 
+               <div className="icon-wrapper">
+                  <img src={product.icons} alt={product.name} className="img-fluid" width={60} height={50} />
+                  <span className="hover-name">{product.name}</span>
+              </div>
+              </Link>
+            </div>
+          </div>
+          ))
+
+          }
+        </div>
+   </div>
+
 
    {/* Recommandation Section */}
     <div className="swiper-button-wrapper position-relative mt-5 ">

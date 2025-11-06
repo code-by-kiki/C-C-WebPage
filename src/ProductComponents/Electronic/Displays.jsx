@@ -40,7 +40,7 @@ export default function DisplayPage()
             <div className="col-md-9">
                 <div className="row">
                     {fliter.map((display,index)=>(
-                      <div className="col-md-4 mb-4" key={index}>
+                      <div className="col-md-4 col-sm-6 mb-4" key={index}>
                           <div className="card h-100">
                             <img src={display.img} className="card-img-top" alt={display.name} />
                             <div className="card-body">

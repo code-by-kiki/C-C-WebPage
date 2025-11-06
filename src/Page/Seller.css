@@ -1,28 +1,45 @@
-.postpage
-{
-    margin-top: 9rem;
+.postpage {
+  min-height: 100vh;
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+  padding: 40px 20px;
 }
 
-.SellCategories
-{
-    margin-top: 10rem;
+.seller-card {
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  background-color: #fff;
 }
 
-.sellercard
-{
-    margin: 10rem 10rem ;
-    padding: 3rem;
-    
+.seller-btn {
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
 }
 
-.Button
-{
-    border-radius: 4rem;
-    width: 20rem;
+.seller-btn:hover {
+  transform: scale(1.05);
+}
+.seller-categories-page {
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
 }
 
-.IndividualCard
-{
-    border: 10px solid #334b66; /* Blue border */
-  border-radius: 10px;
+.category-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+.category-name {
+  font-weight: 600;
+  color: #333;
 }

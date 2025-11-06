@@ -3,8 +3,8 @@ import '../Componend/Footer.css'
 export default function Footer()
 {
     return(
-        <section className="container-fluid mt-5 Footer p-5">
-         <div className="row">
+        <section className="container-fluid mt-2 Footer p-5">
+         <div className="row mt-5">
             {/* About Content */}
             <div className="col-md-4 col-sm-12 ">
              <h4>About Us </h4>
