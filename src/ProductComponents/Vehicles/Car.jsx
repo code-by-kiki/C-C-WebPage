@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CarProductFilter from "../../ProductComponents/Fiter/carproductfilter";
 import carproduct from "../../Product/Data/carproductData";   
-
+import '../../Page/Product.css';
 export default function CarPage() {
   const [filteredCars, setFilteredCars] = useState(carproduct);
 
@@ -43,7 +43,8 @@ export default function CarPage() {
                   <img src={car.img} className="card-img-top" alt={car.name} />
                   <div className="card-body">
                     <h6>{car.name}</h6>
-                    <p>₹{car.price}</p>
+                    <p>{car.description}</p>
+                    <pre>₹{car.price}</pre>
                     <small>{car.brand} | {car.category}</small>
                   </div>
                 </div>

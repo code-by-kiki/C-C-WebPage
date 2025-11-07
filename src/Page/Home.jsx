@@ -6,14 +6,12 @@ import "swiper/css/navigation";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Car from '../assets/HCar.webp';
 import CAR from '../assets/SCar.webp';
-import job from '../assets/job.jpg';
 import cycle from '../assets/Cycles.webp';
 import phone from '../assets/Phone.webp';
 import car from '../assets/MCar.jpeg';
 import Banner1 from '../assets/Banner 1.jpg';
 import Banner2 from '../assets/Banner 2.jpg';
 import Banner3 from '../assets/Banner 3.jpg';
-
 import CarIcon from '../assets/CarIcon.jpg';
 import BikeIcon from '../assets/BikeIcons.png';
 import CycleIcon from '../assets/CycleIcons.jpg';
@@ -29,16 +27,17 @@ import outdoorIcon from '../assets/outdoorIcon.png';
 import officeIcon from '../assets/officeIcon.webp';
 import sportIcon from '../assets/sportIcon.png';
 import gymIcon from '../assets/gymIcon.webp';
+import bike from '../assets/bike.jpg';
 import "../Componend/Home.css";
 import { Link } from "react-router-dom";
 
 const products = [
-  { id: 1, brand: "Maruthi",price:"500000", image: Car,name:'Swift', type:'Hatchback' },
-  { id: 2, brand: "Honda ",price:"200000", image: car ,name:'City', type:'Sedan'},
+  { id: 1, brand: "Maruthi",price:"500000", image: car,name:'Swift', type:'Hatchback' },
+  { id: 2, brand: "Honda ",price:"200000", image: Car ,name:'City', type:'Sedan'},
   { id: 3, brand: "Skoda",price:"700000", image: CAR,name:'Kushaq', type:'Compact SUV' },
-  { id: 4, brand: "Vivo",price:"12000", image: phone, name:'Firefox Tremor X 27.5T', type:'Mountain bike' },
-  { id: 5, brand: "Firefox",price:"20000", image:cycle,name:'Vivo T2 Pro' },
-  { id: 6, brand: "Home Tution",price:"10000", image: job },
+  { id: 4, brand: "Vivo",price:"12000", image:cycle , name:'Firefox Tremor X 27.5T', type:'Mountain bike' },
+  { id: 5, brand: "Firefox",price:"20000", image:phone,name:'Vivo T2 Pro' },
+   { id: 5, brand: "Firefox",price:"20000", image:bike,name:'Vivo T2 Pro' },
 ];
 
 const Banner =[
@@ -106,7 +105,7 @@ const reviews = [
   },
   {
     id: 3,
-    name: "pooja",
+    name: "Poorna",
     image: "https://via.placeholder.com/60",
     rating: 1,
     text: "Very user-friendly platform. Will use again!",
@@ -196,8 +195,8 @@ const ProductSwiper = () => {
   >
     {products.map((product) => (
       <SwiperSlide key={product.id}>
-      <div className="card h-100">
-        <img src={product.image} alt={product.name} className="card-img-top"/>
+      <div className="card ">
+        <img src={product.image} alt={product.name} className="card-img-top" width={600} height={300}/>
         <div className="card-body">
           <h5>{product.name}</h5>
           <p>₹ {product.price} </p>

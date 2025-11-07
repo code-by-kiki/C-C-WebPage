@@ -25,6 +25,7 @@ export default function Vehicles() {
                   alt={`Vehicle ${index + 1}`}
                   className="img-fluid"
                   style={{ maxHeight: "300px", objectFit: "contain" }}
+                   width={500} height={300}
                 />
               </Link>
             </div>

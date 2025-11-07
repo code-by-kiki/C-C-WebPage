@@ -1,3 +1,9 @@
+#navbarContent{
+  font-family:'Lucida Fax' ;
+  font-size: 17px;
+}
+
+
 .list
 {
     display: flex;

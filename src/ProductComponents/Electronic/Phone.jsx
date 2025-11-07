@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import '../../Page/Product.css';
 import phoneproduct from "../../Product/Data/phoneproductData";
 import PhoneproductFliter from "../Fiter/phoneproductfliter";
 
@@ -46,7 +47,8 @@ const PhonePage = () => {
                   <img src={phone.img} className="card-img-top" alt={phone.name} />
                   <div className="card-body">
                     <h6>{phone.name}</h6>
-                    <p>₹{phone.price}</p>
+                    <p>{phone.description}</p>
+                    <pre>₹{phone.price}</pre>
                     <small>{phone.brand} | {phone.RAM} | {phone.storageCapacity}</small>
                   </div>
                 </div>

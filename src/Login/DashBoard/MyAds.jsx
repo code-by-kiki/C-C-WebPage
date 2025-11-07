@@ -1,6 +1,7 @@
 import React from "react";
 import image from '../../assets/No ADs.webp';
 import './Categories.css';
+import { motion } from "framer-motion";
 
 const AdsPage = ({ ads = [
   //  { image:image,title:"Car",description:'bnbbbbbf',}
@@ -16,11 +17,13 @@ const AdsPage = ({ ads = [
           {/* Conditional Rendering */}
           {ads.length === 0 ? (
             <>
-              <img
+              <motion.img
                 src={image}
                 alt="No Ads"
                 width={300}
                 className="img-fluid d-block mx-auto ADImage "
+                animate={{y:[20,10,20]}}
+                transition={{duration:5,repeat:Infinity,ease:'easeInOut'}}
               />
               <h2 className="text-center text-muted">No Ads Available</h2>
             </>

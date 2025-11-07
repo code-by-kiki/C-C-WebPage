@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ProductFilter from '../Fiter/BicyleproductFliter';
 import products from '../../Product/Data/BicycleproductData';
-
+import '../../Page/Product.css';
 const ProductList = () => {
   const [filtered, setFiltered] = useState(products);
 
@@ -41,7 +41,8 @@ const ProductList = () => {
                   <img src={product.image} className="card-img-top" alt={product.name} />
                   <div className="card-body">
                     <h6>{product.name}</h6>
-                    <p>₹{product.price}</p>
+                    <p>{product.description}</p>
+                    <pre>₹{product.price}</pre>
                     <small>{product.brand} | {product.category}</small>
                   </div>
                 </div>

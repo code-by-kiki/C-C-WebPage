@@ -43,14 +43,11 @@ const SportProductPage = () => {
             {filteredProducts.map((product, index) => (
               <div className="col-md-4 mb-4" key={index}>
                 <div className="card h-100">
-                  <img
-                    src={product.img}
-                    alt={product.name}
-                    className="card-img-top"
-                  />
+                  <img src={product.img}  alt={product.name}  className="card-img-top"/>
                   <div className="card-body">
                     <h6>{product.name}</h6>
-                    <p>₹{product.price}</p>
+                    <p>{product.description} </p>
+                    <pre>₹{product.price}</pre>
                     <small>
                       {product.brand} | {product.category} | {product.material}
                     </small>

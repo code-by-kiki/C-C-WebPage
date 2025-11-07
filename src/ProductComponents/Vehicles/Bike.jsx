@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import BikeProductFliter from "../../ProductComponents/Fiter/bikeproductfliter";
 import bikeproduct from '../../Product/Data/bikeproductData';
-
+import '../../Page/Product.css';
 export default function BikePage() 
 {
   const [filtered, setFiltered] = useState(bikeproduct);
@@ -43,7 +43,8 @@ export default function BikePage()
                   <img src={bike.img} className="card-img-top" alt={bike.name} />
                   <div className="card-body">
                     <h6>{bike.name}</h6>
-                    <p>₹{bike.price}</p>
+                    <p>{bike.description}</p>
+                    <pre>₹{bike.price}</pre>
                     <small>{bike.brand} | {bike.category}</small>
                   </div>
                 </div>

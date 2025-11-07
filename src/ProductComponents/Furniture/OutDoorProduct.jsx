@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import outdoorproduct from "../../Product/Data/OutdoorData";
 import OutDoorProductFilter from "../Fiter/OutdoorFliter";
-
+import '../../Page/Product.css';
 const OutDoorPage = () => {
   const [filteredProducts, setFilteredProducts] = useState(outdoorproduct);
 
@@ -41,7 +41,8 @@ const OutDoorPage = () => {
                   <img src={product.img} alt={product.name} className="card-img-top" />
                   <div className="card-body">
                     <h6>{product.name}</h6>
-                    <p>₹{product.price}</p>
+                    <p>{product.description} </p>
+                    <pre>₹{product.price}</pre>
                     <small>{product.brand} | {product.category} | {product.type}</small>
                   </div>
                 </div>

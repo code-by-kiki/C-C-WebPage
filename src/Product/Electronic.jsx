@@ -23,7 +23,7 @@ export default function Electronics()
                 <div className="col-md-4 co-sm-6 mb-4" style={{ display: "grid" }}>
                     <div className="card product-card h-100">
                         <Link to={data.link}>
-                         <img src={data.img} alt="Image" className="img-fluid"/>
+                         <img src={data.img} alt="Image" className="img-fluid" width={600} height={300}/>
                         </Link>
                     </div>
                 </div>

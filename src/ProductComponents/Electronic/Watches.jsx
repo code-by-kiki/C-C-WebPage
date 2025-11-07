@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import WatchProductFilter from '../../ProductComponents/Fiter/watchproductfliter';
 import watchproduct from "../../Product/Data/watchproductData";
+import '../../Page/Product.css';
 
 const WatchesPage = () => {
   const [filtered, setFiltered] = useState(watchproduct);
@@ -45,7 +46,8 @@ const WatchesPage = () => {
                   <img src={watch.img} className="card-img-top" alt={watch.name} />
                   <div className="card-body">
                     <h6>{watch.name}</h6>
-                    <p>₹{watch.price}</p>
+                    <p>{watch.description} </p>
+                    <pre>₹{watch.price}</pre>
                     <small>{watch.brand} | {watch.watch}</small>
                   </div>
                 </div>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import OfficeProductFilter from "../Fiter/OfficeproductFilter";
 import officeproduct from "../../Product/Data/OfficeproductData";
-
+import '../../Page/Product.css';
 
 const OfficeproductPage=()=>{
     const [Filter,setFilter]=useState(officeproduct);
@@ -43,7 +43,8 @@ const OfficeproductPage=()=>{
                                   <img src={product.img} alt={product.name} className="card-img-top"/>
                                   <div className="card-body">
                                     <h5> {product.name} </h5>
-                                    <p>₹{product.price}</p>
+                                    <p>{product.description} </p>
+                                    <pre>₹{product.price}</pre>
                                     <small>{product.brand} | {product.category} | {product.type} </small>
                                  </div>  
                                 </div>    

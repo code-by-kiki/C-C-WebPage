@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import '../../Page/Product.css';
 import LaptopProductFilter from "../Fiter/LaptopProductFliter";
 import laptopproduct from "../../Product/Data/LaptopproductData";
 
@@ -52,7 +53,8 @@ export default function LaptopPage() {
                   <img src={laptop.img} className="card-img-top" alt={laptop.name} />
                   <div className="card-body">
                     <h6>{laptop.name}</h6>
-                    <p>₹{laptop.price}</p>
+                    <p>{laptop.description} </p>
+                    <pre>₹{laptop.price}</pre>
                     <small>{laptop.brand} | {laptop.RAM} | {laptop.storage}</small>
                   </div>
                 </div>

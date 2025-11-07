@@ -4,3 +4,25 @@
    font-weight: bold;
    color:Black
 }
+
+h6{
+  font-size: 20px;
+  font-family: 'palatino Lintype';
+  font-weight: bold;
+}
+
+p{
+    font-family: 'Sitka';
+  font-size: 20px;
+  color: gray;
+}
+
+
+small{
+   font-size: 15px;
+  font-family: 'Tahoma';
+}
+
+pre{
+   font-size: 20px;
+}

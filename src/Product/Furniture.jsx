@@ -22,7 +22,7 @@ export default function Furniture()
   <div key={index} className="col-md-4 mb-4" style={{display:"grid"}}>
     <div className="card product-card">
       <Link to={FunitureData.link}>
-        <img src={FunitureData.img} alt="Image" className="img-fluid"/>
+        <img src={FunitureData.img} alt="Image" className="img-fluid"  width={600} height={300}/>
       </Link>
     </div>
   </div>

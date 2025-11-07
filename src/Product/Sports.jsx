@@ -19,7 +19,7 @@ export default function Sports()
                     <div className="col-md-4">
                         <Link to={sportData.link}>
                         <div className="card product-card h-100" >
-                           <img src={sportData.img} alt="Image" className="img-fluid"/>
+                           <img src={sportData.img} alt="Image" className="img-fluid"  width={600} height={300}/>
                         </div>
                         
                         </Link>

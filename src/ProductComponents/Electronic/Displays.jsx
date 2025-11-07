@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import '../../Page/Product.css';
 import DisplayProductFliter from "../Fiter/Displayproductfliter";
 import displayproduct from "../../Product/Data/DisplayproductData";
 export default function DisplayPage()
@@ -45,7 +46,8 @@ export default function DisplayPage()
                             <img src={display.img} className="card-img-top" alt={display.name} />
                             <div className="card-body">
                                 <h6>{display.name}</h6>
-                                <p> ₹ {display.price} </p>
+                                <p> {} </p>
+                                <pre> ₹ {display.price} </pre>
                                 <small> {display.brand} | {display.category} </small>
                             </div>
                           </div>

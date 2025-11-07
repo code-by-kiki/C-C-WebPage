@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import gymproduct from "../../Product/Data/GymProductData";
 import GymProductFilter from "../Fiter/GymProductFilter";
-
+import '../../Page/Product.css';
 const GymProductPage = () => {
   const [filteredProducts, setFilteredProducts] = useState(gymproduct);
 
@@ -50,7 +50,8 @@ const GymProductPage = () => {
                   />
                   <div className="card-body">
                     <h6>{product.name}</h6>
-                    <p>₹{product.price}</p>
+                    <p>{product.description} </p>
+                    <pre>₹{product.price}</pre>
                     <small>
                       {product.brand} | {product.category} | {product.material}
                     </small>

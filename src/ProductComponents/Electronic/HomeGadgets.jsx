@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import '../../Page/Product.css';
 import SmartGadgetsFilter from '../../ProductComponents/Fiter/smartgadgetfliter';
 import smartproduct from "../../Product/Data/smartgadgetData";
 
@@ -41,7 +42,8 @@ const SmartGadget = () => {
                   <img src={gadget.img} alt={gadget.name} className="card-img-top" />
                   <div className="card-body">
                     <h6>{gadget.name}</h6>
-                    <p>₹{gadget.price}</p>
+                    <p>{gadget.description} </p>
+                    <pre>₹{gadget.price}</pre>
                     <small>{gadget.type} | {gadget.brand}</small>
                   </div>
                 </div>

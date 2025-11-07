@@ -1,6 +1,7 @@
 .dashboard-wrapper {
-  background-color: #f8f9fa;
-  min-height: 100vh;
+ background-image: linear-gradient(to right, rgb(255, 255, 255) 0%,rgb(255, 255, 255) 0%, rgb(165, 190, 211) 150%);
+  min-height:100vh;
+  font-family: 'Copperplate Gothic';
 }
 
 .sidebar button.active {

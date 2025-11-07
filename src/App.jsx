@@ -59,7 +59,7 @@ return (
         </button>
         
         
-        <div className="collapse navbar-collapse" id="navbarContent">
+        <div className="collapse navbar-collapse " id="navbarContent">
           <div className="navbar-nav me-auto d-flex flex-wrap align-items-center gap-2">
             <Link to="/Vehicles" className="nav-link Vehicles">Vehicles</Link>
             <Link to="/Electornic" className="nav-link Electornic">Electornic</Link>

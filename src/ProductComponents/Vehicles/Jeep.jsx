@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import JeepProductFliter from '../../ProductComponents/Fiter/jeepproductfliter';
 import jeepproduct from "../../Product/Data/jeepproductData";
-
+import '../../Page/Product.css';
 export default function JeepPage()
 {
     const [fliter, setfliter] = useState(jeepproduct);
@@ -48,7 +48,8 @@ export default function JeepPage()
                   <img src={jeep.img} className="card-img-top" alt={jeep.name} />
                   <div className="card-body">
                     <h6>{jeep.name}</h6>
-                    <p>₹{jeep.price}</p>
+                    <p>{jeep.description}</p>
+                    <pre>₹{jeep.price}</pre>
                     <small>{jeep.brand} | {jeep.category}</small>
                   </div>
                 </div>

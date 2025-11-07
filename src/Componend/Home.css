@@ -1,8 +1,28 @@
 .section
 {
-  font-family:  Arial, sans-serif;
   margin-top: 150px;
 }
+
+h1{
+   font-family: 'Georgia' ;
+}
+
+h5{
+  font-size: 25px;
+  font-family: 'palatino Lintype';
+  font-weight: bold;
+}
+
+small{
+   font-size: 15px;
+  font-family: 'Tahoma';
+}
+
+p{
+  font-family: 'Sitka';
+  font-size: 20px;
+}
+
 
 /* Product Card */
 .product-card {
