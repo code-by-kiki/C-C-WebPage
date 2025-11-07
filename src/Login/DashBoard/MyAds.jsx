@@ -1,8 +1,9 @@
 import React from "react";
-import image from '../../assets/SellerBackGround.png';
+import image from '../../assets/No ADs.webp';
+import './Categories.css';
 
 const AdsPage = ({ ads = [
-   { image:image,title:"Car",description:'bnbbbbbf',}
+  //  { image:image,title:"Car",description:'bnbbbbbf',}
 ] }) => {
  
 
@@ -10,7 +11,7 @@ const AdsPage = ({ ads = [
     <div className="container-fluid">
       <div className="row">
         <div className="col-12 title">
-          <h1 className="mb-5 text-center">Cart</h1>
+          <h1 className="mb-5 text-center">My ADs</h1>
 
           {/* Conditional Rendering */}
           {ads.length === 0 ? (
@@ -19,7 +20,7 @@ const AdsPage = ({ ads = [
                 src={image}
                 alt="No Ads"
                 width={300}
-                className="img-fluid d-block mx-auto mb-5"
+                className="img-fluid d-block mx-auto ADImage "
               />
               <h2 className="text-center text-muted">No Ads Available</h2>
             </>
