@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import Profile from './DashBoard/Profile';
 import MyAds from './DashBoard/MyAds';
 import SavedItems from './DashBoard/Cart';
-import Setting from './DashBoard/Setting';
 import './DashBoard.css';
 
 function Dashboard() {
@@ -58,14 +57,6 @@ function Dashboard() {
                   </button>
                 </li>
                 <li className="nav-item">
-                  <button
-                    className={`btn btn-outline-primary w-100 ${activePage === 'setting' ? 'active' : ''}`}
-                    onClick={() => setActivePage('setting')}
-                  >
-                    <i className="bi bi-gear-fill me-2"></i> Settings
-                  </button>
-                </li>
-                <li className="nav-item">
                   <button className="btn btn-danger w-100" onClick={handleLogout}>
                     <i className="bi bi-box-arrow-right me-2"></i> Logout
                   </button>
@@ -81,7 +72,6 @@ function Dashboard() {
                 {activePage === 'profile' && <Profile />}
                 {activePage === 'myAds' && <MyAds />}
                 {activePage === 'savedItems' && <SavedItems />}
-                {activePage === 'setting' && <Setting />}
               </main>
             </div>
           </div>

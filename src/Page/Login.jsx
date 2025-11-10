@@ -20,9 +20,9 @@ function Login() {
   }, [navigate]);
   
 const handleLogin = () => {
-  const validUsernames = ['kiki', 'Krithika'];
-  const validPhones = ['6374760410', '7777'];
-  const validEmail = 'krithikaselvam68@gmail.com';
+  const validUsernames = ['kiki', 'Krithika','Arasu'];
+  const validPhones = ['6374760410', '7777','1020'];
+  const validEmail = '22ece040@ldc.edu.in';
 
   if (
     validUsernames.includes(username) &&

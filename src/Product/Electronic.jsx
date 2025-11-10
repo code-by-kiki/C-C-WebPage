@@ -17,20 +17,26 @@ export default function Electronics()
         {img:tv , link:'/ProductComponents/Electronic/Display'}
     ]
     return(
-    <div className="container-fluid " style={{marginTop:150,marginBottom:100}}>
-        <div className="row">
-            {Electronic.map((data=>(
-                <div className="col-md-4 co-sm-6 mb-4" style={{ display: "grid" }}>
-                    <div className="card product-card h-100">
-                        <Link to={data.link}>
-                         <img src={data.img} alt="Image" className="img-fluid" width={600} height={300}/>
-                        </Link>
-                    </div>
-                </div>
-            )))}
+
+   <div className="container-fluid ProductPage mt-5 mb-5">
+  <div className="row">
+    {Electronic.map((data, index) => (
+      <div  key={index} className="col-lg-4 col-md-6 col-sm-12 mb-4 d-flex align-items-stretch" >
+        <div className="card product-card w-100">
+          <Link to={data.link}>
+            <img
+              src={data.img}
+              alt="Product"
+              className="img-fluid"
+              style={{ width: "100%", height: "auto", objectFit: "cover" }}
+            />
+          </Link>
         </div>
-        
-    </div>
+      </div>
+    ))}
+  </div>
+</div>
+
     )
 
 } 

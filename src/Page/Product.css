@@ -12,9 +12,8 @@ h6{
 }
 
 p{
-    font-family: 'Sitka';
+    font-family: 'Tahoma';
   font-size: 20px;
-  color: gray;
 }
 
 
@@ -25,4 +24,11 @@ small{
 
 pre{
    font-size: 20px;
+}
+
+.ProductPage
+{
+ 
+  background: linear-gradient(to right, #f3f7ff, #c2d1eb);
+  padding : 150px 20px 150px 20px;
 }

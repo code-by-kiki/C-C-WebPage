@@ -6,11 +6,12 @@ export default function Profile() {
   const phonenum = localStorage.getItem('phonenum') || 'None';
   const email = localStorage.getItem('email') || 'no-email';
   
+  if (typeof localStorage !== 'undefined'){
   if(!localStorage.getItem('loginDate'))
   {
    localStorage.setItem(
       'loginDate' ,
-      new Date().toLocaleDateString('en-In',
+      new Date().toLocaleDateString('en-IN',
         {
          day:'numeric',
          month:'long',
@@ -18,7 +19,7 @@ export default function Profile() {
       })
    );
   }  
-
+  }
   const loginDate = localStorage.getItem('loginDate')
   const card = [
           { title: ' Products Purchased', value: '0' },

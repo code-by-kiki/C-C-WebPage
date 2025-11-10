@@ -1,4 +1,6 @@
 import React from "react";
+import Gif from '../assets/Gif.gif';
+import '../Page/Product.css';
 import bike from "../assets/bike.jpg";
 import Car from "../assets/Cars.jpg";
 import jeep from "../assets/Jeep.jpg";
@@ -14,11 +16,11 @@ export default function Vehicles() {
   ];
 
   return (
-     <div className="container-fluid " style={{marginTop:150,marginBottom:100}}>
+     <div className="container-fluid ProductPage" style={style}>
       <div className="row">
         {vehicles.map((Data, index) => (
-          <div className="col-md-4 mb-4 " key={index} style={{ display: "grid" }}>
-            <div className=" product-card ">
+          <div className="col-md-4  " key={index} style={{ display: "grid" }}>
+            <div className=" product-card bg-light">
               <Link to={Data.link}>
                 <img
                   src={Data.img}
@@ -34,4 +36,12 @@ export default function Vehicles() {
       </div>
     </div>
   );
+}
+
+const style={
+  backgroundImage: Gif,
+  backgroundSize: 'cover',
+  backgroundRepeat:'no-repeat',
+  backgroundPosition:'center',
+  
 }

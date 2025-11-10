@@ -9,9 +9,9 @@ import CAR from '../assets/SCar.webp';
 import cycle from '../assets/Cycles.webp';
 import phone from '../assets/Phone.webp';
 import car from '../assets/MCar.jpeg';
-import Banner1 from '../assets/Banner 1.jpg';
-import Banner2 from '../assets/Banner 2.jpg';
-import Banner3 from '../assets/Banner 3.jpg';
+import Banner1 from '../assets/Banner 1.webp';
+import Banner2 from '../assets/Banner 2.png';
+import Banner3 from '../assets/Banner 3.png';
 import CarIcon from '../assets/CarIcon.jpg';
 import BikeIcon from '../assets/BikeIcons.png';
 import CycleIcon from '../assets/CycleIcons.jpg';
@@ -141,7 +141,7 @@ const ProductSwiper = () => {
       (
        <SwiperSlide key={banner.id}>
          <div className="bannercard">
-          <img src={banner.image} alt="Pic" style={{width:1500,height:500,borderRadius:20, padding:10}} />
+          <img src={banner.image} alt="Pic" style={{width:1500,height:600,borderRadius:20, padding:10}} />
          </div>
 
        </SwiperSlide>

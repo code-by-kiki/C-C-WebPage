@@ -1,4 +1,5 @@
 import React from "react";
+import '../Page/Product.css';  
 import living from '../assets/Living.webp';
 import bedroom from '../assets/bed.webp';
 import outdoor from '../assets/Outdoor.webp';
@@ -16,10 +17,10 @@ export default function Furniture()
    ]
 
     return(
-    <div className="container-fluid mb-4 " style={{marginTop:150,marginBottom:100}}>
+    <div className="container-fluid mb-4  ProductPage" >
         <div className="row">
       {furniture.map((FunitureData, index) => (
-  <div key={index} className="col-md-4 mb-4" style={{display:"grid"}}>
+   <div  key={index} className="col-lg-4 col-md-6 col-sm-12 mb-4 d-flex align-items-stretch" >
     <div className="card product-card">
       <Link to={FunitureData.link}>
         <img src={FunitureData.img} alt="Image" className="img-fluid"  width={600} height={300}/>

@@ -3,6 +3,15 @@
     background-color:rgb(248, 252, 255);
 }
 
+h4{
+  font-family: 'Lucida Console';
+}
+
+p{
+  color: rgb(67, 64, 64);
+  font-family:'Maiandra GD' ;
+}
+
 .instagram, .facebook ,.twitter
 {
   position: relative;

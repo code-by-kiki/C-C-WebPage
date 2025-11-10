@@ -16,7 +16,7 @@ import SmartGadgetsPage from './ProductComponents/Electronic/HomeGadgets';
 import Cart from './Login/DashBoard/Cart';
 import Home from './Page/Home';
 import Footer from './Page/Footer';
-import Product from './Page/Product';
+// import Product from './Page/Product';
 import Seller from './Page/Seller';
 import Login from './Page/Login';
 import Dashboard from './Login/DashBoard';
@@ -88,7 +88,7 @@ return (
         {/* Main Pages */}
         <Route path="/" element={<Home />} />
         <Route path='/search' element={<SearchResults/>}/> 
-        <Route path="/Product" element={<Product />} />
+        {/* <Route path="/Product" element={<Product />} /> */}
         <Route path="/Login/DashBoard/Cart" element={<Cart />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
