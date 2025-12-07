@@ -1,12 +1,16 @@
 import React from 'react';
 import './Categories.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function Profile() {
+const navigate=useNavigate();
+
   const username = localStorage.getItem('username') || 'Guest';
   const phonenum = localStorage.getItem('phonenum') || 'None';
   const email = localStorage.getItem('email') || 'no-email';
   
-  if (typeof localStorage !== 'undefined'){
+  if (typeof localStorage !== 'undefined')
+  {
   if(!localStorage.getItem('loginDate'))
   {
    localStorage.setItem(
@@ -46,7 +50,7 @@ export default function Profile() {
             <p className="text-muted"> Logged in: {loginDate}</p>
           </div>
           <div className="col-md-2 text-end">
-            <button style={{width:100,borderRadius:10}}>Edit</button>
+            <button style={{width:100,borderRadius:10}} onClick={()=>navigate("../Login/DashBoard/Edit")}  >Edit</button>
           </div>
         </div>
       </section>

@@ -16,7 +16,6 @@ import SmartGadgetsPage from './ProductComponents/Electronic/HomeGadgets';
 import Cart from './Login/DashBoard/Cart';
 import Home from './Page/Home';
 import Footer from './Page/Footer';
-// import Product from './Page/Product';
 import Seller from './Page/Seller';
 import Login from './Page/Login';
 import Dashboard from './Login/DashBoard';
@@ -32,21 +31,20 @@ import GymProduct from './ProductComponents/Sport/GymProduct';
 import SellerCategories from './Page/SellerCategories';
 import SportProduct from './ProductComponents/Sport/SportProduct';
 import CreatePost from './Seller/Createpost';
-
+import Otherpost from './Seller/Otherpost';
+import Edit from './Login/DashBoard/Edit';
 
 function App() {
 return (
-
     <BrowserRouter>
       <nav className="navbar navbar-expand-md list container-fluid fixed-top">
         <Link to="/" className="navbar-brand">
           <img src={Logo} alt="Logo" className="Logo img-fluid" />
         </Link>
-       
-        <SearchBar/> 
-       
 
-        <button
+         <SearchBar/> 
+     
+          <button
           className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
@@ -57,21 +55,20 @@ return (
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        
-        
+         
         <div className="collapse navbar-collapse " id="navbarContent">
-          <div className="navbar-nav me-auto d-flex flex-wrap align-items-center gap-2">
+          <div className="navbar-nav me-auto d-flex flex-wrap align-items-center ">
             <Link to="/Vehicles" className="nav-link Vehicles">Vehicles</Link>
             <Link to="/Electornic" className="nav-link Electornic">Electornic</Link>
             <Link to="/Furniture" className="nav-link Furniture">Home & Furniture</Link>
             <Link to="/Sports" className="nav-link Sports">Sports & Fitness</Link>
           </div>
 
-          <div className="navbar-nav d-flex gap-2 align-items-center">
+          <div className="navbar-nav d-flex align-items-center">
             <Link to="/Login" className="nav-link Login">  Registration/Login</Link>
 
               <Link to="/Login/DashBoard/Cart" className='nav-link Cart'>
-              Cart <i class="bi bi-cart3 fs-5"></i>
+              Cart<i class="bi bi-cart3 fs-5"></i>
             </Link>
             
             <Link to="/Seller" className="nav-link Seller">
@@ -82,13 +79,13 @@ return (
         </div>
       </nav>
 
-
-      {/* All Routes must be inside this block */}
       <Routes>
+
         {/* Main Pages */}
         <Route path="/" element={<Home />} />
         <Route path='/search' element={<SearchResults/>}/> 
-        {/* <Route path="/Product" element={<Product />} /> */}
+
+        <Route path="/Login/DashBoard/Edit" element={<Edit />} />
         <Route path="/Login/DashBoard/Cart" element={<Cart />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
@@ -125,6 +122,7 @@ return (
          {/* Seller Post */}
           <Route path="/SellerCategories" element={<SellerCategories />} />
           <Route path="/CreatePost/:category" element={<CreatePost/>} />
+          <Route path='/Otherpost' element={<Otherpost/>}/>
       </Routes>
       <Footer />
     </BrowserRouter>
@@ -132,4 +130,3 @@ return (
 }
 
 export default App;
-

@@ -4,7 +4,9 @@
   margin: auto;
   padding: 20px;
 }
-
+pre{
+   font-size: 20px;
+}
 .post-form {
   display: flex;
   flex-direction: column;
@@ -28,3 +30,22 @@
   border-radius: 8px;
   cursor: pointer;
 }
+
+.status-buttons {
+  display: flex;
+  justify-content: left; 
+  gap: 1rem; 
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.status-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color:rgb(248, 252, 255) ;
+  transition: background-color 0.3s ease;
+}
+
+

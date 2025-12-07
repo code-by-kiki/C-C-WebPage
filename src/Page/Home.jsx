@@ -28,6 +28,7 @@ import officeIcon from '../assets/officeIcon.webp';
 import sportIcon from '../assets/sportIcon.png';
 import gymIcon from '../assets/gymIcon.webp';
 import bike from '../assets/bike.jpg';
+import person from '../assets/person.png';
 import "../Componend/Home.css";
 import { Link } from "react-router-dom";
 
@@ -71,28 +72,28 @@ const reviews = [
   {
     id: 1,
     name: "Priya",
-    image: phone,
+    image: person,
     rating: 5,
     text: "Amazing service! Highly recommended for quick deals.",
   },
   {
     id: 2,
     name: "Rahul",
-    image: car,
+    image: person,
     rating: 4,
     text: "Good experience overall. Found what I needed easily.",
   },
   {
     id: 3,
     name: "Sneha",
-    image: phone,
+    image: person,
     rating: 5,
     text: "Very user-friendly platform. Will use again!",
   },
   {
     id: 3,
     name: "Krithika",
-    image: "https://via.placeholder.com/60",
+    image: person,
     rating: 5,
     text: "Very user-friendly platform. Will use again!",
   },
@@ -116,7 +117,7 @@ const ProductSwiper = () => {
   return (
    <section className="section">
    {/* Banner Section */}
-   <div className="swiper-button-wrapper position-relative mt-5 d-none d-md-block" >
+   <div className="swiper-button-wrapper position-relative mt-5 d-none d-md-none d-lg-block" >
      <button className="btn btn-outline-light  custom-prev" style={{backgroundColor:"rgba(168, 167, 170, 0.2)"}}><i class="bi bi-caret-left fs-5 text-light"></i></button>
      <button className="btn btn-outline-light custom-next" style={{backgroundColor:"rgba(168, 167, 170, 0.2)"}}><i class="bi bi-caret-right fs-5 text-light"></i></button>
       <Swiper modules={[Navigation,Autoplay]}  
@@ -234,7 +235,7 @@ const ProductSwiper = () => {
             
                 <img
                   src={review.image}
-                  alt="User avatar"
+                  alt= {review.name}
                   className="rounded-circle me-3"
                   width="50"
                   height="50"

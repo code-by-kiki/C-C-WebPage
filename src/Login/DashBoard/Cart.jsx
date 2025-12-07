@@ -3,7 +3,7 @@ import CART from '../../assets/Cart.png'
 import image from '../../assets/No ADs.webp';
 import { motion } from "framer-motion";
 
-   const CartPage =({cart=[
+const CartPage =({cart=[
   //  { image:image,title:"Car",description:'bnbbbbbf',}
    ]})=>{
 return(
